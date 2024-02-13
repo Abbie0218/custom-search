@@ -17,6 +17,7 @@ import React from "react";
 interface IProps{
     list: any,
     listHeaderLabel: any,
+    floatPosition: any
 
 }
 
@@ -40,7 +41,7 @@ const UserSearch = (props: IProps) => {
     return (
         <>
 
-            <Search sx={{ width: "1145" }} onClick={openSearchBar}>
+            <Search sx={{ float: props.floatPosition }} onClick={openSearchBar}>
                 <SearchIconWrapper>
                     <SearchIcon />
                 </SearchIconWrapper>
