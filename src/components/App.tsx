@@ -14,25 +14,16 @@ import SearchIcon from "@mui/icons-material/Search";
 import { Search, SearchIconWrapper, StyledInputBase } from "../utils/Search";
 import React from "react";
 
-const UserSearch = () => {
+interface IProps{
+    list: any,
+    listHeaderLabel: any,
+
+}
+
+const UserSearch = (props: IProps) => {
     // const [searchTerm, setSearchTerm] = useState("");
     const [openSearch, setOpenSearch] = useState(false);
-    let masterList = [
-        {
-            name: 'Hari Shankar B'
-        },
-        {
-            name: 'Aswin Kumar S'
-        },
-        {
-            name: 'Boopathi J'
-        },
-        {
-            name: 'Dheneshraajan K'
-        }
-
-    ];
-
+  
     const openSearchBar = () => {
         setOpenSearch(true);
     };
@@ -93,12 +84,12 @@ const UserSearch = () => {
                             border: 'none'
                         }}
                         subheader={
-                            <ListSubheader component='div'>{masterList?.length > 0 ? "Frequently searched users" : ""}</ListSubheader>
+                            <ListSubheader component='div'>{props.list?.length > 0 ? props.listHeaderLabel : ""}</ListSubheader>
                         }
 
                     >
-                        {masterList?.length > 0 ? (
-                            masterList?.map((item: any) => {
+                        {props.list?.length > 0 ? (
+                            props.list?.map((item: any) => {
                                 return (
                                     <>
                                         <ListItem
