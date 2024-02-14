@@ -71,7 +71,7 @@ const UserSearch = (props: IProps) => {
                     },
                 }}
             >
-                <Box sx={{ width: "fit-content", height: "fit-content" }}>
+                <Box sx={{ width: "fit-content", height: "fit-content", top:"-37px",marginLeft:"9px" }}>
                     <List
                         disablePadding
                         sx={{
